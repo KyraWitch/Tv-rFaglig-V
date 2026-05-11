@@ -2,6 +2,16 @@
 
 /*Global*/
 
+Body {
+    background-color: #f0f0f0;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/*Global*/
+
 * {
     margin: 0;
     padding: 0;
