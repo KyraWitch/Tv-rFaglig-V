@@ -49,11 +49,13 @@ body {
 
 .banner1 {
     background-image: url('Pictures/download.png');
+    object-fit: cover;
 }
 
 .banner2 {
     background-image: url('Pictures/download\ 2.png');
     transform: translateX(100%);
+    object-fit: cover;
 }
 
 img {
@@ -152,6 +154,20 @@ nav.show {
     width: 80%;
     justify-self: center;
     background-color: red;
+
+    /*Column*/
+    :nth-child(1), :nth-child(2) :nth-child(3){
+        :nth-child(1){}
+
+        :nth-child(2){}
+
+
+    }
+
+
+
+
+
 }
 
 
