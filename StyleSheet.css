@@ -66,49 +66,87 @@ img {
 
 /*Nav*/
 
-nav {
+header {
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav { 
     position: fixed;
     top: 0;
     left: 0;
-    height: 7vh;
     width: 100%;
-    background-color: goldenrod;
-    color: white;
-    border-bottom: 2px solid black;
+    height: 7vh;
     display: flex;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 100;
-
-    ul {
-        List-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 80%;
-        align-self: center;
-        
-
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 2.25vh;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        a:hover {
+    
+    a:hover {
             background-color: lightskyblue;
             color: black;
             border-radius: 5px;
         }
-    }
-
-    ;
 }
+
+nav ul {
+    list-style: none;
+    font-size: 1.2rem;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+nav a.active,
+nav a[aria-current="page"] {
+    border-bottom: 2px solid #ffffff;
+    pointer-events: none;  /* makes it not clickable */
+    cursor: default;
+}
+
+
+header h1 {
+    text-align: center;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+#front-logo img {
+    height: 10rem;
+    width: 25rem;
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transform: translateY(-50%);
+}
+
 
 nav.show {
     transform: translateY(0);
