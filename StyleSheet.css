@@ -28,11 +28,12 @@ body {
 
 .banner-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 700px;
     overflow: hidden;
     z-index: 4;
 }
@@ -46,7 +47,6 @@ body {
     background-position: center;
 }
 
-
 .banner1 {
     background-image: url('Pictures/download.png');
 }
@@ -56,12 +56,19 @@ body {
     transform: translateX(100%);
 }
 
+img {
+    max-height: 100%;
+}
+
 
 
 /*Nav*/
 
 nav {
-    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 7vh;
     width: 100%;
     background-color: goldenrod;
     color: white;
@@ -69,7 +76,9 @@ nav {
     display: flex;
     align-content: center;
     justify-content: center;
-    
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
 
     ul {
         List-style: none;
@@ -97,9 +106,10 @@ nav {
     }
 
     ;
+}
 
-
-
+nav.show {
+    transform: translateY(0);
 }
 
 
@@ -142,7 +152,7 @@ nav {
     width: 80%;
     justify-self: center;
     background-color: red;
-
+}
 
 
 
