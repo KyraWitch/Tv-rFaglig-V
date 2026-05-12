@@ -5,7 +5,7 @@
 Body {
     background-color: #f0f0f0;
     max-width: 100%;
-    
+
     margin: 0;
     padding: 0;
 }
@@ -18,80 +18,137 @@ Body {
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
-    
-    
+
+
 }
 
 
-.banner-contaier{
-        position: relative;
-        width: 100%;
-        height: 800px;
-        overflow: hidden;
-        z-index: 4;
-    }
-        
-        .banner{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transition: transform 1s ease-in-out;
-            background-size: cover;
-            background-position: center;
-        }
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    z-index: 4;
+}
 
-        
-        .banner1{
-            background-image: url('Pictures/Mother_Nature_Blog_005ef7f4-1ab8-4812-855b-95a984090f34.webp');
-        }
-        .banner2{
-            background-image: url('Pictures/aspit_logo.png');
-            transform: translateX(100%);
-        }
+.banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.banner1 {
+    background-image: url('Pictures/download.png');
+}
+
+.banner2 {
+    background-image: url('Pictures/download\ 2.png');
+    transform: translateX(100%);
+}
 
 
 
 /*Nav*/
 
+nav {
+    height: 10vh;
+    width: 100%;
+    background-color: goldenrod;
+    color: white;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+
+    ul {
+        List-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 80%;
+        align-self: center;
+        
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 2.25vh;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: lightskyblue;
+            color: black;
+            border-radius: 5px;
+        }
+    }
+
+    ;
+
+
+
+}
 
 
 /*Index*/
-.Index{
+.Index {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 80vh;
     width: 100%;
-    
+
 
     /*Title*/
-    h1{
+    h1 {
         font-size: 5vh;
         color: black;
         margin-bottom: 20px;
     }
-    
+
 
     /*Picture gal*/
-    :nth-child(2){
+    :nth-child(2) {
         Height: 50%;
         width: 100%;
-        background-color:blue;
-        display:inline;
-        
+        background-color: blue;
+        display: inline;
+
     }
 }
+
+
+.Activities {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 80%;
+    justify-self: center;
+    background-color: red;
 
 
 
 
 
 /*Footer*/
-footer{
+footer {
     display: flex;
     flex-direction: row;
     height: 20%;
@@ -100,12 +157,14 @@ footer{
     justify-content: space-around;
     align-items: center;
     border: 2px solid black;
-    
-    :nth-child(1), :nth-child(2), :nth-child(3){
-     display: flex;
-     flex-direction: column;
-     width: 30%;
-     
+
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
 
         h2 {
             height: 10%;
@@ -114,15 +173,16 @@ footer{
             padding-bottom: 5px;
         }
 
-        p{
+        p {
             font-size: 2vh;
         }
 
-        a{
+        a {
             font-size: 2vh;
             text-decoration: none;
             color: black;
         }
+
         a:hover {
             text-decoration: underline;
             color: lightskyblue;
@@ -132,5 +192,5 @@ footer{
     }
 
 
-    
+
 }
