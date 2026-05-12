@@ -155,11 +155,29 @@ nav.show {
     justify-self: center;
     background-color: red;
 
-    /*Column*/
+    /*Column 1 2 3*/
     :nth-child(1), :nth-child(2) :nth-child(3){
-        :nth-child(1){}
+        
+        :nth-child(1), :nth-child(2){
+            
+            :first-child{
+                
+                img{}
 
-        :nth-child(2){}
+            }
+
+            h2{
+
+            }
+
+            p{
+
+            }
+
+
+        }
+
+        
 
 
     }

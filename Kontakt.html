@@ -3,32 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+        <ul>
+            <li><a href="/Index.html">Home</a></li>
+            <li><a href="">Placeholder</a></li>
+        </ul>
+    </nav>
+    <h1 id="front-logo">
+        <img src="Pictures/aspit_logo.png" alt="Logo" srcset="">
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="/Activities.html">Activities</a></li>
+            <li><a class="active" aria-current="page" href="/html/Kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
 
 
+    </header>
 
-        <!--Footer-->
+    <!-- Background Wallpaper -->
+    <div class="StartWallpaper"></div>
+
+    <main>
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We'd love to hear from you.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select name="Subject" id="subject" required>
+                        <option value="" disabled selected>Select a subject</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Support Request">Support Request</option>
+                        <option value="Feedback">Feedback</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" style="resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
     <footer>
-        <div>
-        <h2>Email</h2>
-        <p>TempEmail@temp.com</p>
-        </div>
-
-        <div>
-            <h2>Phone number</h2>
-            <p>Temp</p>
-        </div>
-
-        <div>
-            <h2>Website</h2>
-            <a href="https://aspit.dk/">Aspit's Website</a>
-        </div>
-
     </footer>
-    <!--End Footer-->
+
+
 </body>
+
+
 </html>
