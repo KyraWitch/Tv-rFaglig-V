@@ -36,21 +36,31 @@ Body {
 .banner {
     position: absolute;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     transition: transform 1s ease-in-out;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+
 }
 
 .banner1 {
-    background-image: url('Pictures/Lan\ Act.png');
+    background-image: url('Pictures/Jonni\ Corner\ banner.png');
     object-fit: cover;
+    
+    
 }
 
 .banner2 {
-    background-image: url('Pictures/Jonni\ Corner\ Act.png');
+    background-image: url('Pictures/Boat\ Banner.png');
     transform: translateX(100%);
+    object-fit: cover;
+}
+
+.banner3 {
+    background-image: url('Pictures/Museum\ banner.png');
+    transform: translateX(200%);
     object-fit: cover;
 }
 
@@ -216,20 +226,21 @@ nav.show {
         width: 33%;
 
         :nth-child(1) {
-            justify-self: left;
+            justify-self: right;
         }
 
         :nth-child(2) {
-            justify-self: right;
+            justify-self: left;
         }
 
         :nth-child(1),
         :nth-child(2) {
 
-            width: 40%;
+            width: 100%;
+            height: 100%;
 
             :first-child {
-                width: 80%;
+                width: 100%;
                 height: 100%;
 
                 img {
