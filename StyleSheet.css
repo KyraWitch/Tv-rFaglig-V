@@ -8,6 +8,7 @@ Body {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    
 }
 
 /*Global*/
@@ -39,15 +40,16 @@ Body {
     transition: transform 1s ease-in-out;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .banner1 {
-    background-image: url('Pictures/download.png');
+    background-image: url('Pictures/Lan\ Act.png');
     object-fit: cover;
 }
 
 .banner2 {
-    background-image: url('Pictures/download\ 2.png');
+    background-image: url('Pictures/Jonni\ Corner\ Act.png');
     transform: translateX(100%);
     object-fit: cover;
 }
@@ -60,10 +62,11 @@ img {
 
 /*Nav*/
 
+
+
+
+
 header {
-    background-image: url();
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
     width: 100%;
     height: auto;
@@ -71,11 +74,9 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav { 
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -89,12 +90,12 @@ nav {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 100;
-    
+
     a:hover {
-            background-color: lightskyblue;
-            color: black;
-            border-radius: 5px;
-        }
+        background-color: lightskyblue;
+        color: black;
+        border-radius: 5px;
+    }
 }
 
 nav ul {
@@ -117,7 +118,8 @@ nav a {
 nav a.active,
 nav a[aria-current="page"] {
     border-bottom: 2px solid #ffffff;
-    pointer-events: none;  /* makes it not clickable */
+    pointer-events: none;
+    /* makes it not clickable */
     cursor: default;
 }
 
@@ -146,6 +148,17 @@ nav.show {
     transform: translateY(0);
 }
 
+.show {
+    background-color: #194541;
+    border-radius: 0 0 70% 70%;
+    
+    li a {
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+    }
+}
+
 
 /*Index*/
 .Index {
@@ -169,15 +182,15 @@ nav.show {
     :nth-child(2) {
         /* Height: 50%; */
         width: 100%;
-        background-color: blue;
         display: inline;
 
     }
 }
 
 
-#Act-Body{
-    background-color: black;
+#Act-Body {
+    background-color: #194541;
+    border-radius: 40%;
 }
 
 .Activities {
@@ -190,26 +203,36 @@ nav.show {
     height: 80vh;
     width: 80%;
     justify-self: center;
-    background-color: red;
+    background-color: white;
 
     /*Column 1 2 3*/
-    :nth-child(1), :nth-child(2) :nth-child(3){
-    
+    :nth-child(1),
+    :nth-child(2) :nth-child(3) {
+
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
         width: 33%;
-        
-        :nth-child(1), :nth-child(2){
+
+        :nth-child(1) {
+            justify-self: left;
+        }
+
+        :nth-child(2) {
+            justify-self: right;
+        }
+
+        :nth-child(1),
+        :nth-child(2) {
 
             width: 40%;
-            
-            :first-child{
-                width: 60%;
-                height: 80%;
-                
-                img{
+
+            :first-child {
+                width: 80%;
+                height: 100%;
+
+                img {
                     object-fit: fill;
                     height: 100%;
                     width: 100%;
@@ -217,18 +240,21 @@ nav.show {
 
             }
 
-            h2{
+            h2 {
                 font-size: 2vh;
+                width: 100%;
+                text-align: center;
             }
 
-            p{
+            p {
                 font-size: 1.5vh;
+                width: 100%;
             }
 
 
         }
 
-        
+
 
 
     }
@@ -240,34 +266,96 @@ nav.show {
 }
 
 
-.Event-links > div {
+.Event-links>div {
     display: grid;
-    object-fit: cover;
-    width: 100%;
-    grid-template-areas: 
-    "act1 act1 act2 act2"
-    "act3 act3 act3 act3"
-    "act4 act4 act4 act4";
+    grid-template-columns: 65% 35%;
+    overflow: hidden;
+    grid-template-areas:
+        "act1 act2"
+        "act3 act3"
+        "act4 act4";
 
+    >div {
+        position: relative;
+        overflow: hidden;
+    }
 
-
-    > div:nth-child(1) {
+    >div:nth-child(1) {
         grid-area: act1;
     }
-    > div:nth-child(2) {
+
+    >div:nth-child(2) {
         grid-area: act2;
     }
-    > div:nth-child(3) {
+
+    >div:nth-child(3) {
         grid-area: act3;
     }
-    > div:nth-child(4) {
+
+    >div:nth-child(4) {
         grid-area: act4;
     }
 
-
-
 }
 
+/* Event Links Grid Container */
+.Event-links {
+    overflow: hidden;
+}
+
+/* Image Grid Items */
+.Event-links img {
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+/* Clickable Link Overlay */
+.Event-links a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Larger text box for act1 (big image) */
+.Event-links > div > div:nth-child(1) a {
+    font-size: 2.5rem;
+    padding: 40px 60px;
+}
+
+/* Smaller text box for other items */
+.Event-links > div > div:nth-child(2) a,
+.Event-links > div > div:nth-child(3) a,
+.Event-links > div > div:nth-child(4) a {
+    font-size: 1rem;
+    padding: 25px 30px;
+}
+
+.Event-links a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* .Event-links > div > div:hover img {
+    filter: blur(3px);
+} */
 
 
 
@@ -277,10 +365,11 @@ footer {
     flex-direction: row;
     height: 20%;
     width: 100%;
-    background-color: red;
+    background-color: #194541;
     justify-content: space-around;
     align-items: center;
     border: 2px solid black;
+    color: white;
 
     :nth-child(1),
     :nth-child(2),
@@ -289,7 +378,7 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 30%;
-        
+
 
 
         h2 {
@@ -297,7 +386,7 @@ footer {
             width: 40%;
             font-size: 2.5vh;
             padding-bottom: 5px;
-            text-decoration: underline;
+            color: white;
         }
 
         p {
@@ -306,8 +395,9 @@ footer {
 
         a {
             font-size: 2vh;
-            text-decoration: none;
-            color: black;
+            text-decoration: underline;
+            color: white;
+
         }
 
         a:hover {
@@ -315,6 +405,7 @@ footer {
             color: lightskyblue;
 
         }
+
 
     }
 
