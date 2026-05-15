@@ -202,20 +202,22 @@ nav.show {
 
 #Act-Body {
     background-color: #194541;
-    border-radius: 40%;
+    height: 83vh;
+    width: 100%;
 }
 
 .Activities {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-self: center;
     align-items: center;
     justify-content: center;
-    justify-self: center;
-    height: 80vh;
+    height: 100%;
     width: 80%;
     justify-self: center;
     background-color: white;
+    
 
     /*Column 1 2 3*/
     :nth-child(1),
@@ -226,14 +228,9 @@ nav.show {
         flex-wrap: nowrap;
         justify-content: center;
         width: 33%;
-
-        :nth-child(1) {
-            justify-self: right;
-        }
-
-        :nth-child(2) {
-            justify-self: left;
-        }
+        height: 100%;
+        align-items: center;
+        justify-items:space-evenly;
 
         :nth-child(1),
         :nth-child(2) {
