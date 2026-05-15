@@ -371,6 +371,7 @@ nav.show {
 
 /*Footer*/
 footer {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     height: 20%;
@@ -380,6 +381,8 @@ footer {
     align-items: center;
     border: 2px solid black;
     color: white;
+    align-items: center;
+    text-align: center;
 
     :nth-child(1),
     :nth-child(2),
